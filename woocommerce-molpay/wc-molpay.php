@@ -81,7 +81,7 @@ function wcmolpay_gateway_load() {
             $this->id = 'molpay';
             $this->icon = plugins_url( 'images/molpay.gif', __FILE__ );
             $this->has_fields = false;
-            $this->pay_url = 'https://www.onlinepayment.com.my/MOLPay/pay/';
+            $this->pay_url = 'https://secure.molpay.co.id/MOLPay/pay/';
             $this->method_title = __( 'MOLPay', 'wcmolpay' );
 
             // Load the form fields.
@@ -159,24 +159,24 @@ function wcmolpay_gateway_load() {
                     'title' => __( 'Title', 'wcmolpay' ),
                     'type' => 'text',
                     'description' => __( 'This controls the title which the user sees during checkout.', 'wcmolpay' ),
-                    'default' => __( 'MOLPay Malaysia Online Payment', 'wcmolpay' )
+                    'default' => __( 'MOLPay Indonesia Online Payment', 'wcmolpay' )
                 ),
                 'description' => array(
                     'title' => __( 'Description', 'wcmolpay' ),
                     'type' => 'textarea',
                     'description' => __( 'This controls the description which the user sees during checkout.', 'wcmolpay' ),
-                    'default' => __( 'Pay with MOLPay Malaysia Online Payment', 'wcmolpay' )
+                    'default' => __( 'Pay with MOLPay Indonesia Online Payment', 'wcmolpay' )
                 ),
                 'merchant_id' => array(
                     'title' => __( 'Merchant ID', 'wcmolpay' ),
                     'type' => 'text',
-                    'description' => __( 'Please enter your MOLPay Merchant ID.', 'wcmolpay' ) . ' ' . sprintf( __( 'You can to get this information in: %sMOLPay Account%s.', 'wcmolpay' ), '<a href="https://www.onlinepayment.com.my/MOLPay/" target="_blank">', '</a>' ),
+                    'description' => __( 'Please enter your MOLPay Merchant ID.', 'wcmolpay' ) . ' ' . sprintf( __( 'You can to get this information in: %sMOLPay Account%s.', 'wcmolpay' ), '<a href="https://secure.molpay.co.id/MOLPay/" target="_blank">', '</a>' ),
                     'default' => ''
                 ),
                 'verify_key' => array(
                     'title' => __( 'Verify Key', 'wcmolpay' ),
                     'type' => 'text',
-                    'description' => __( 'Please enter your MOLPay Verify Key.', 'wcmolpay' ) . ' ' . sprintf( __( 'You can to get this information in: %sMOLPay Account%s.', 'wcmolpay' ), '<a href="https://www.onlinepayment.com.my/MOLPay/" target="_blank">', '</a>' ),
+                    'description' => __( 'Please enter your MOLPay Verify Key.', 'wcmolpay' ) . ' ' . sprintf( __( 'You can to get this information in: %sMOLPay Account%s.', 'wcmolpay' ), '<a href="https://secure.molpay.co.id/MOLPay/" target="_blank">', '</a>' ),
                     'default' => ''
                 )
             );
@@ -311,7 +311,7 @@ function wcmolpay_gateway_load() {
 			$postData[]= $k."=".$v;
 			}
 			$postdata = implode("&",$postData);
-			$url = "https://www.onlinepayment.com.my/MOLPay/API/chkstat/returnipn.php";
+			$url = "https://secure.molpay.co.id/MOLPay/API/chkstat/returnipn.php";
 			$ch = curl_init();
 			curl_setopt($ch, CURLOPT_POST , 1 );
 			curl_setopt($ch, CURLOPT_POSTFIELDS , $postdata );
@@ -386,7 +386,7 @@ function wcmolpay_gateway_load() {
 			$postData[]= $k."=".$v;
 			}
 			$postdata = implode("&",$postData);
-			$url = "https://www.onlinepayment.com.my/MOLPay/API/chkstat/returnipn.php";
+			$url = "https://secure.molpay.co.id/MOLPay/API/chkstat/returnipn.php";
 			$ch = curl_init();
 			curl_setopt($ch, CURLOPT_POST , 1 );
 			curl_setopt($ch, CURLOPT_POSTFIELDS , $postdata );

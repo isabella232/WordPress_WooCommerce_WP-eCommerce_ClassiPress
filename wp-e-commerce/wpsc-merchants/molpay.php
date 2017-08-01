@@ -9,8 +9,8 @@
 */
 
 $nzshpcrt_gateways[$num] = array(
-    'name'              => 'MOLPay Malaysia Online Payment Gateway',
-    'display_name'      => 'MOLPay Malaysia Online Payment Gateway',
+    'name'              => 'MOLPay Indonesia Online Payment Gateway',
+    'display_name'      => 'MOLPay Indonesia Online Payment Gateway',
     'internalname'      => 'molpay',
     'function'          => 'gateway_molpay',
     'form'              => 'form_molpay',
@@ -50,7 +50,7 @@ function gateway_molpay($seperator, $sessionid) {
     $data['verify_key']  = get_option('molpay_vkey');
     $data['returnurl']   = get_option('transact_url');
     $data['callbackurl'] = get_option('transact_url');
-    $molpay_url = "https://www.onlinepayment.com.my/MOLPay/pay/" . $data['merchant_id'] . "/";  
+    $molpay_url = "https://secure.molpay.co.id/MOLPay/pay/" . $data['merchant_id'] . "/";
    
     //User details
     if($_POST['collected_data'][get_option('molpay_form_first_name')] != '') {   

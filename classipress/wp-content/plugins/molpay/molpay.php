@@ -55,7 +55,7 @@ function molpay_add_gateway_values(){
 								'no' => __('No', MOL_TD))),
 
 			array('name' => __('Merchant ID', MOL_TD),
-				'desc' => sprintf(__("<i>Please enter your MOLPay Merchant ID. You can to get this information in: <a target='_new' href='%s'>MOLPay Account</i>", MOL_TD), 'https://www.onlinepayment.com.my/MOLPay/'),
+				'desc' => sprintf(__("<i>Please enter your MOLPay Merchant ID. You can to get this information in: <a target='_new' href='%s'>MOLPay Account</i>", MOL_TD), 'https://secure.molpay.co.id/MOLPay/'),
 				'tip'  => '',
 				'id' => $app_abbr.'_molpay_merchant_id',
 				'css' => 'min-width:250px;',
@@ -66,7 +66,7 @@ function molpay_add_gateway_values(){
 				'vis' => ''),
 
 			array('name' => __('Verify Key', MOL_TD),
-				'desc' => sprintf(__("<i>Please enter your MOLPay Verify Key. You can to get this information in: <a target='_new' href='%s'>MOLPay Account</i>", MOL_TD), 'https://www.onlinepayment.com.my/MOLPay/'),
+				'desc' => sprintf(__("<i>Please enter your MOLPay Verify Key. You can to get this information in: <a target='_new' href='%s'>MOLPay Account</i>", MOL_TD), 'https://secure.molpay.co.id/MOLPay/'),
 				'tip' => '',
 				'id' => $app_abbr.'_molpay_verify_key',
 				'css' => 'min-width:250px;',
@@ -134,7 +134,7 @@ function gateway_molpay($order_vals){
 
 	$vcode = md5($amount.$merchant_id.$orderid.$verify_key);
 
-	$molpay_url = "https://www.onlinepayment.com.my/MOLPay/pay/".$merchant_id.'/';
+	$molpay_url = "https://secure.molpay.co.id/MOLPay/pay/".$merchant_id.'/';
 
 	$return_url = add_query_arg(array('oid' => $order_vals['oid'], 'molpay' => $order_vals['oid'].'_'.$userdata->ID), CP_DASHBOARD_URL);
 	$return_url = wp_nonce_url($return_url,$order_vals['oid']);
@@ -202,7 +202,7 @@ function dashboard_button_molpay($the_id,$type=''){
 	$verify_key = get_option($app_abbr.'_molpay_verify_key');
 	$vcode = md5($amount.$merchant_id.$orderid.$verify_key);
 
-	$molpay_url = "https://www.onlinepayment.com.my/MOLPay/pay/".$merchant_id.'/';
+	$molpay_url = "https://secure.molpay.co.id/MOLPay/pay/".$merchant_id.'/';
 
 	$return_url = add_query_arg(array('oid' => $orderid, 'molpay' => $orderid.'_'.$userdata->ID), CP_DASHBOARD_URL);
 	$return_url = wp_nonce_url($return_url,$orderid);
@@ -268,7 +268,7 @@ function molpay_to_merchant(){
 		$postData[] = $k."=".$v;
 	}
 	$postdata = implode("&",$postData);
-	$url = "https://www.onlinepayment.com.my/MOLPAY/API/chkstat/returnipn.php";
+	$url = "https://secure.molpay.co.id/MOLPAY/API/chkstat/returnipn.php";
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_POST, 1);
 	curl_setopt($ch, CURLOPT_POSTFIELDS, $postdata);
