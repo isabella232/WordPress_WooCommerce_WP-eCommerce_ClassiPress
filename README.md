@@ -1,23 +1,23 @@
-MOLPay WordPress Plugin
+WordPress Plugin
 =====================
 
-MOLPay Plugin for Wordpress developed by MOLPay technical team.
+Plugin for Wordpress developed by technical team.
 
 Notes
 -----
 
-MOLPay Sdn. Bhd. is not responsible for any problems that might arise from the use of this module. 
+OmniPay is not responsible for any problems that might arise from the use of this module. 
 Use at your own risk. Please backup any critical data before proceeding. For any query or 
-assistance, please email support@molpay.com 
+assistance, please email support@omnipay.co.id
 
 
 Installations for Wordpress Plugin 
 -----------------------------
-[ClassiPress Version	3.2.1](https://github.com/MOLPay/WordPress/wiki/Installation-for-Classipress-Plugins)
+[ClassiPress Version	3.2.1](https://github.com/OmniPay/WordPress/wiki/Installation-for-Classipress-Plugins)
 
-[WooCommerce Version 2.3.x & 2.4.x & 2.6.x](https://github.com/MOLPay/WordPress/wiki/Installation-for-WooCommerce-Plugins)
+[WooCommerce Version 2.3.x & 2.4.x & 2.6.x](https://github.com/OmniPay/WordPress/wiki/Installation-for-WooCommerce-Plugins)
 
-[WP-eCommerce Version 3.9.x](https://github.com/MOLPay/WordPress/wiki/Installation-for-WP-e-Commerce-Plugins)
+[WP-eCommerce Version 3.9.x](https://github.com/OmniPay/WordPress/wiki/Installation-for-WP-e-Commerce-Plugins)
 
 Contribution
 ------------
@@ -28,17 +28,7 @@ You can contribute to this plugin by sending the pull request to this repository
 Issues
 ------------
 
-Submit issue to this repository or email to our support@molpay.com
+Submit issue to this repository or email to our support@omnipay.co.id
 
 
-Support
--------
-
-Merchant Technical Support / Customer Care : support@molpay.com <br>
-Sales/Reseller Enquiry : sales@molpay.com <br>
-Marketing Campaign : marketing@molpay.com <br>
-Channel/Partner Enquiry : channel@molpay.com <br>
-Media Contact : media@molpay.com <br>
-R&D and Tech-related Suggestion : technical@molpay.com <br>
-Abuse Reporting : abuse@molpay.com
 
